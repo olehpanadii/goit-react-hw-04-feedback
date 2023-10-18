@@ -2,9 +2,10 @@ import { FaRegSmileBeam, FaRegMeh, FaRegSadCry } from 'react-icons/fa';
 import { ButtonWrapper, FeedbackBtn } from './FeedbackOptions.styled';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+  const optionKeys = Object.keys(options);
   return (
     <ButtonWrapper>
-      {options.map(option => (
+      {optionKeys.map(option => (
         <FeedbackBtn
           key={option}
           type="button"
